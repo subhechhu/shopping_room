@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="12dp"
+       android:id="@+id/edittext"
+       android:hint="@string/enter_text"
+       android:background="@android:drawable/editbox_background"
+       android:importantForAutofill="no"
+       android:inputType="text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:id="@+id/edittext_quantity"
+        android:hint="@string/enter_quantity"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton_kg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:text="@string/kg" />
+
+        <RadioButton
+            android:id="@+id/radioButton_lt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/litre" />
+
+        <RadioButton
+            android:id="@+id/radioButton_item"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/items" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/button_add"
+            android:text="@string/add"
+            android:backgroundTint="@color/green"
+            android:layout_marginEnd="4dp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/button_reset"
+            android:text="@string/clear"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="@color/red"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:id="@+id/recyclerview"
+        tools:listitem="@layout/row_items" />
+
+</LinearLayout>
